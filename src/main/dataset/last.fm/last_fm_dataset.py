@@ -15,7 +15,8 @@ client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, clien
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 #url = "https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=Energetic&api_key=0d5cf010febef894eb16adda9a85b41e&format=json"
-url = sys.args[1]
+url = sys.argv[1]
+result_filename = sys.argv[2]
 
 response = requests.get(url)
 result = response.json()
@@ -73,4 +74,4 @@ for song in result_albums:
                 playlist_dataframe = pd.concat([playlist_dataframe, track_dataframe], ignore_index = True)
             break
 
-playlist_dataframe.to_csv('energetic_songs.csv',encoding='utf-8')
+playlist_dataframe.to_csv(result_filename,encoding='utf-8')
