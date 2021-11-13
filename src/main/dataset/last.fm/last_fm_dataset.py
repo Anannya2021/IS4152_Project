@@ -6,14 +6,16 @@ import spotipy.util as util
 import spotipy.oauth2 as oauth2
 import pandas as pd
 from spotipy.oauth2 import SpotifyClientCredentials
+import sys
 
-CLIENT_ID = "0eda4e64f627414d891942c08c7c66ee"
-CLIENT_SECRET = "3c5637c9e6ac4ed2a435556aa8bf91d2"
+CLIENT_ID = #INPUT YOUR CLIENT_ID
+CLIENT_SECRET = #INPUT YOUR CLIENT_SECRET
 
 client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
-url = "https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=Energetic&api_key=0d5cf010febef894eb16adda9a85b41e&format=json"
+#url = "https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=Energetic&api_key=0d5cf010febef894eb16adda9a85b41e&format=json"
+url = sys.args[1]
 
 response = requests.get(url)
 result = response.json()
