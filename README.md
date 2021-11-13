@@ -6,6 +6,7 @@ With this project we aim to find the effect music has on an individual's affecti
 1. Dataset Generation
 2. Classification Models
 3. Statistical Inference
+4. Tools
 
 ## 1. Dataset Generation
 
@@ -29,4 +30,39 @@ The jupyter notebook Keras_Classification.ipynb under src/main/classification co
 
 ## 3. Statistical Inference
 
-The readme file for the statistical inference section can be found under the folder Expriment/ANOVA.
+Steps Explained : Source File Raw - Music_Emotion Survey Results Hypothesis for each respective emotion class is constructed in a seperate tab. Include this in a tabular format in the deck. (1 slide) Each emotion class basic stats is derived and plotted as box plots. Include the snapshot and box plots in deck (either 1 or 2 or 4 slides). Refer to stats and boxplot folder Step 4 purpose is to illustrate summary statistics and visualization. As we are conducting One-way ANOVA and t-test on multiple means across time points within subjects, we check for the normality assumption for each emotional state. Refer to QQ plot folder. For angry and fearful, the points lie on the reference line. We also checked for outliers - refer to R-Code folder for interpretation Conclude with t-test, generally the results were a mix of p<0.005 and p > 0.005. (I will need to research a bit on the interpretation of this conclusion)
+
+## 4. Tools
+
+The folder src/main/tools contains the following files:
+
+1. youtube_extract.py: Code to generate 1 minute audio clips with .mp3 extension using YouTube links as input. The links are input from a .csv file. The file youtube_links.csv is an example of the expected format.
+
+Installing dependencies:
+
+```
+pip install ffmpeg
+pip install pytube
+```
+
+To run the file, we need to pass a .csv file with youtube links as an argument.
+
+```
+python youtube_extract.py youtube_links.csv
+```
+
+2. fade.py: fade.py is used to fade the audio clips at the end once they are generated.
+
+Dependencies installation:
+
+```
+pip install pydub
+```
+
+To run the file, we need to pass the folder containing the audio clips which needs to be clipped and the output folder where we want to store the faded songs.
+
+```
+python fade.py Energetic_en Energetic_en_fade
+```
+
+3. Survey_responses_preprocessing.ipynb: This jupyter notebook is used to combine the responses received from the participants with the audio features of the songs they listened to. 
