@@ -13,11 +13,15 @@ To create the dataset, songs can be sourced from either Spotify music library or
 
 Command to source songs and audio features based on last.fm playlists:
 
-> python last_fm_dataset.py "https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=Energetic&api_key=0d5cf010febef894eb16adda9a85b41e&format=json" energetic_songs.csv
+`
+python last_fm_dataset.py "https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=Energetic&api_key=0d5cf010febef894eb16adda9a85b41e&format=json" energetic_songs.csv
+`
 
 Command to source songs and audio features from Spoitfy:
 
-> python dataset-create.py
+`
+python dataset-create.py
+`
 
 ## 2. Classification Model
 
