@@ -4,14 +4,13 @@ import spotipy.oauth2 as oauth2
 import pandas as pd
 from spotipy.oauth2 import SpotifyClientCredentials
 
-CLIENT_ID = "0eda4e64f627414d891942c08c7c66ee"
-CLIENT_SECRET = "3c5637c9e6ac4ed2a435556aa8bf91d2"
+CLIENT_ID = #YOUR CLIENT_ID
+CLIENT_SECRET = #YOUR CLIENT_SECRET
 
 client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 ##English song dataset generation
-
 #Happy
 happy = "2MOtMdv1xDmKseMHwPZLpc"
 #sad
