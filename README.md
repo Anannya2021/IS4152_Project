@@ -29,6 +29,10 @@ python dataset-create.py
 
 The jupyter notebook Keras_Classification.ipynb under src/main/classification contains the code for training a multi-class multi-layer neural network for predicting labels for any new songs. The file can be opened in Google colab and run. 
 
+Birch clustering.ipynb under the same folder contains the files for running BIRCH machine learning model for unsupervised learning. 
+
+Kmeans emotion classification.ipynb under the same folder contains the code for running K-Means algorithm on the un-annoatated dataset.
+
 ## 3. Statistical Inference
 
 Steps Explained : Source File Raw - Music_Emotion Survey Results Hypothesis for each respective emotion class is constructed in a seperate tab. Include this in a tabular format in the deck. (1 slide) Each emotion class basic stats is derived and plotted as box plots. Include the snapshot and box plots in deck (either 1 or 2 or 4 slides). Refer to stats and boxplot folder Step 4 purpose is to illustrate summary statistics and visualization. As we are conducting One-way ANOVA and t-test on multiple means across time points within subjects, we check for the normality assumption for each emotional state. Refer to QQ plot folder. For angry and fearful, the points lie on the reference line. We also checked for outliers - refer to R-Code folder for interpretation Conclude with t-test, generally the results were a mix of p<0.005 and p > 0.005. (I will need to research a bit on the interpretation of this conclusion)
