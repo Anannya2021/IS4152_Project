@@ -5,9 +5,11 @@ With this project we aim to find the effect music has on an individual's affecti
 ## Table of Contents
 1. Dataset Generation
 2. Classification Models
-3. Statistical Inference
-4. Tools
-5. Frontend
+  2.1 Supervised Model
+  2.2 Unsupervised Model
+4. Statistical Inference
+5. Tools
+6. Frontend
 
 ## 1. Dataset Generation
 
@@ -27,11 +29,15 @@ python dataset-create.py
 
 ## 2. Classification Model
 
-The jupyter notebook Keras_Classification.ipynb under src/main/classification contains the code for training a multi-class multi-layer neural network for predicting labels for any new songs. The file can be opened in Google colab and run. 
+### 2.1 Supervised Model
 
-Birch clustering.ipynb under the same folder contains the files for running BIRCH machine learning model for unsupervised learning. 
+The jupyter notebook Keras_Classification.ipynb under src/main/classification/supervised contains the code for training a multi-class multi-layer neural network for predicting labels for any new songs. The file can be opened in Google colab and run. A small snapshot of the file needed for training the model has been uploaded in the same folder.
 
-Kmeans emotion classification.ipynb under the same folder contains the code for running K-Means algorithm on the un-annoatated dataset.
+### 2.2 Unsupervised Model
+
+Birch clustering.ipynb under src/main/classification/unsupervised contains the files for running BIRCH machine learning model for unsupervised learning. 
+
+Kmeans emotion classification.ipynb under the src/main/classification/unsupervised contains the code for running K-Means algorithm on the un-annoatated dataset.
 
 ## 3. Statistical Inference
 
