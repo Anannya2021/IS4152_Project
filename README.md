@@ -7,6 +7,7 @@ With this project we aim to find the effect music has on an individual's affecti
 2. Classification Models
 3. Statistical Inference
 4. Tools
+5. Frontend
 
 ## 1. Dataset Generation
 
@@ -66,3 +67,7 @@ python fade.py Energetic_en Energetic_en_fade
 ```
 
 3. Survey_responses_preprocessing.ipynb: This jupyter notebook is used to combine the responses received from the participants with the audio features of the songs they listened to. 
+
+## 5. Frontend
+
+The frontend for this survey is a react application which has been deployed using the Firebase hosting services. The frontend comprises of HTML, CSS and Javascript elements. The frontend has been connected to the backend of the survey which is a real-time database on Firebase.
